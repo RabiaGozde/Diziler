@@ -85,3 +85,46 @@ public class Main {
       System.out.println(Arrays.toString(dizi));
     }
 }
+## Dizideki Tekrar Eden Sayıları Bulan Program
+import java.util.Scanner;
+import java.util.Arrays;
+ 
+public class Main {
+  static boolean isFind(int[] arr,int value){
+    for (int i:arr){
+      if(i==value){
+        return true;
+      }
+    }
+    return false;
+  }
+    
+  public static void main(String[] args) {
+        
+    int sayac=0;
+    int sayac2=0;
+    
+    int[]dizi={10, 20, 20, 10, 10, 20, 5, 20};
+    int[]frekans=new int[dizi.length];
+                
+    for(int i=0;i<dizi.length;i++){
+      for(int j=0;j<dizi.length;j++){
+        if((i!=j)&&(dizi[i]==dizi[j])){
+          if(!isFind(frekans, dizi[i])){
+            frekans[sayac++]=dizi[i];
+            
+          }
+          
+          break;
+        }
+        
+      }
+               
+    }
+    for(int value: frekans){
+      if(value!=0){
+        System.out.println(value);
+      }
+    }    
+  }
+}
