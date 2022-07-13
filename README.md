@@ -59,3 +59,29 @@ public class Main {
         }
     }
 }
+## Dizideki Elemanları Sıralama
+import java.util.Scanner;
+import java.util.Arrays;
+ 
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+
+      System.out.print("Bir Sayıyı giriniz: ");
+      int a = scan.nextInt();
+        
+      int [] dizi = new int[a];
+        
+        
+      for(int i = 0; i < dizi.length; i++)
+      {
+          System.out.print((i+1) + ". Sayıyı giriniz: ");
+          dizi[i] = scan.nextInt();
+            
+      }
+      Arrays.sort(dizi);  
+      System.out.println(Arrays.toString(dizi));
+    }
+}
