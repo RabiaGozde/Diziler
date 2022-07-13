@@ -7,7 +7,6 @@ public class Main {
       double sum = 0.0;
       for (int i = 0; i < numbers.length; i++) {
         sum += (1.0 / numbers[i]);
-        
       }
       System.out.println(numbers.length/sum);
     }
@@ -150,9 +149,9 @@ public class Main {
     for (int row = 0; row < matrix.length; row++) {
     for (int column = 0; column < matrix[row].length; column++) {
        System.out.print(matrix[row][column] + " "); 
-  }
+    }
     System.out.println(); 
-  }
+    }
     int transpose[][] = new int[n][m];
     for (c = 0; c < m; c++)
       for (d = 0; d < n; d++)
